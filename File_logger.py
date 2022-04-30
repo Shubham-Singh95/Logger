@@ -50,7 +50,7 @@ def dlp_logger():
 
     event_handler = LoggingEventHandler()
     observer = Observer()
-    observer.schedule(event_handler, path='/', recursive=True)
+    observer.schedule(event_handler, path='C:/Users/Asus/Desktop/restAPI', recursive=True)
     observer.start()
     try:
         while True:
