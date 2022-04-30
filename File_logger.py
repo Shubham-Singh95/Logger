@@ -18,12 +18,14 @@ def dlp_logger():
                         level=logging.NOTSET,
                         format='%(asctime)s, %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S')
-    # Creates a logger named test
+   
+    # Creates a logger named Event_Logger
 
-    logger = logging.getLogger('test')
+    logger = logging.getLogger('event_logger')
 
     # Switches from one file to the next when the current file reaches a 2000 bytes
-    handler = RotatingFileHandler("Event_Logger.csv", maxBytes=2000, backupCount=2)
+    
+    handler = RotatingFileHandler("event_logger.csv", maxBytes=2000, backupCount=2)
 
     # Parses the handler to the test logger
 
@@ -36,7 +38,7 @@ def dlp_logger():
     # Observer polls the changes made the in the directory
 
     observer = Observer()
-    observer.schedule(event_handler, path='C:/Users/Asus/Desktop/restAPI', recursive=True)
+    observer.schedule(event_handler, path='/', recursive=True)
     observer.start()
     try:
         while True:
