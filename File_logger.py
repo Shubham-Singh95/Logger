@@ -14,7 +14,7 @@ def dlp_logger():
 
     # Initializes the format of the logs
 
-    logging.basicConfig(filename='test.csv',
+    logging.basicConfig(filename='event_logger.csv',
                         level=logging.NOTSET,
                         format='%(asctime)s, %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S')
